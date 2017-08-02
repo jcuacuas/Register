@@ -48,12 +48,23 @@ out3,err = proc3.communicate()
 print "\n" , out3
 out3 = out3.rstrip()
 
-D = {}
-D['0x00'] = out1
-D['0x01'] = out2
-D['0x02'] = out3
+cmd4 = "awk '/0x10/ { print $7; }' ../../Registers.txt "
+proc4 = subprocess.Popen(cmd4 , shell=True,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+out4,err = proc4.communicate()
 
-for k,v in D.items():
-    print k,':',v
+print "\n" , out4
+out4 = out4.rstrip()
+
+if out4 == "02":
+    print "hello"
+
+D = {}
+D['0x00'] = 'Current page number: ' + out1
+D['0x01'] = 'Highest number of a page that is supported by the module: ' + out2
+D['0x02'] = 'Vendor pages start at: ' + out3
+D['0x10'] = out4
+
+for register,output in D.items():
+    print register,':',output
 
 print err
