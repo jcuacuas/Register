@@ -85,4 +85,12 @@ d['breakfast']['eggs'] = 'bacon'
 
 for part1,part2 in d.items():
     for part2,part3 in d.items():
-        print part1,'=',part3,':',part2 
+        print part1,'=',part3,':',part2
+
+        D = {'Composer': {'first': 'Johannes', 'last' : 'Brahms'},
+         'Period': 'Romantic',
+         'Piece' : ['Piano Concerto No. 1', 'Piano Concerto No. 2',
+		    'Symphony No. 1', 'Symphony No. 2',
+		    'Violin Concerto in D Major',
+		    'Hungarian Dances'] }
+print D['Piece'][1]
