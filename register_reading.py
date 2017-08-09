@@ -68,3 +68,21 @@ for register,output in D.items():
     print register,':',output
 
 print err
+
+def increment(number):
+        return number + 0x01
+
+N = 0x02
+for i in xrange(N):
+    print increment(0x10)
+
+d = {}
+d['lunch'] = {}
+d['breakfast'] = {}
+d['lunch']['ham'] = 'cheese'
+d['breakfast']['eggs'] = 'bacon'
+
+
+for part1,part2 in d.items():
+    for part2,part3 in d.items():
+        print part1,'=',part3,':',part2 

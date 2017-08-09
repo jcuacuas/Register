@@ -14,3 +14,8 @@ p1.stdout.close()
 out,err = p2.communicate()
 
 print out
+print err
+
+N = 0x0A
+for i in xrange(N):
+    print "hello"
