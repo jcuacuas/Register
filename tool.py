@@ -96,7 +96,10 @@ D = {'Registers': [Current_Page, Max_Pages,
 #DISPLAYING METHOD THAT USES DICTIONARIES
 step = 0
 for i in D['Registers']:
+<<<<<<< HEAD
     #ORGANIZING THE DISPLAY
+=======
+>>>>>>> f421ecaf34c81391a1473b0abe0cae8dd177eb8f
     if step == 0:
         x = 'Paging Mechanism Registers'
         print '-'*len(x) + '\nPaging Mechanism Registers \n'+ '-'*len(x)
@@ -109,7 +112,10 @@ for i in D['Registers']:
 x = 'Characteristics Registers'
 print '-'*len(x) + '\nCharacteristics Registers \n'+ '-'*len(x)
 
+<<<<<<< HEAD
 #MORE COMPLEX OFFFSET READING
+=======
+>>>>>>> f421ecaf34c81391a1473b0abe0cae8dd177eb8f
 def on_off(i):
     if i == '1':return True
     else: return False
@@ -122,12 +128,18 @@ D = {'Values': [First, Second, Third, Fourth, Fifth, Sixth, Seventh, Eight] }
 scale = 16
 num_of_bits = 8
 num_of_bits1 = 4
+<<<<<<< HEAD
 #TURN THE HEX STRING INTO BINARY STRING
 Capabilities0_Test = bin(int(Capabilities0, scale))[2:].zfill(num_of_bits)
 #REVERSE THE BITS
 Capabilities0_Test = Capabilities0_Test[::-1]
 
 #SEPERATE THE BITS AND DETERMINE WHETHER THE BIT IS ON OR NOT
+=======
+Capabilities0_Test = bin(int(Capabilities0, scale))[2:].zfill(num_of_bits)
+Capabilities0_Test = Capabilities0_Test[::-1]
+
+>>>>>>> f421ecaf34c81391a1473b0abe0cae8dd177eb8f
 step = 0
 for num_of_bits in Capabilities0_Test:
     if on_off(Capabilities0_Test[step]) == True:
@@ -136,7 +148,10 @@ for num_of_bits in Capabilities0_Test:
         D['Values'][step] = 0
     step = step + 1
 
+<<<<<<< HEAD
 #IF THE BIT IS ON: PRINT DESCRIPTION
+=======
+>>>>>>> f421ecaf34c81391a1473b0abe0cae8dd177eb8f
 print '\n' + '-'*5 + ' CAPABILITIES0 - Offset0x10 ' + '-'*5 + '\n'
 if D['Values'][0]:
     print 'Module supports asserting the EVENT_n pin when an enabled event occurs'
@@ -155,6 +170,11 @@ if D['Values'][6]:
 if D['Values'][7]:
     print 'Module supports the LCOM interface'
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f421ecaf34c81391a1473b0abe0cae8dd177eb8f
 scale = 16
 num_of_bits = 8
 num_of_bits1 = 4
@@ -199,7 +219,10 @@ for num_of_bits1 in Energy_Source_Policy_Test:
         D['Values'][step] = 0
     step = step + 1
 
+<<<<<<< HEAD
 #DISPLAY ORGANIZATION
+=======
+>>>>>>> f421ecaf34c81391a1473b0abe0cae8dd177eb8f
 print '\n' + '-'*5 + ' ENERGY_SOURCE_POLICY_TEST - Offset0x14 ' + '-'*5 + '\n'
 
 if D['Values'][0]:
